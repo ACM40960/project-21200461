@@ -9,6 +9,7 @@
 <img src="https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252">
 <img src="https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=Keras&logoColor=white">
 </p>
+
 <!--ABOUT-->
 ## About the Project
 
@@ -44,11 +45,61 @@ I have also built two simple defence techniques against these attacks:
 
 <!-- Installation details -->
 ## Getting Started
-Google Collab :
 
+Since I have used only a notebook format to implement the project there are two ways you can run this project:
+
+### Use the hassle free Google Collab notebook
+
+All the necessary libraries are downloaded as part of the notebook and uses its own compute power to run the project.
+<br><br>
 <a href="https://colab.research.google.com/drive/1LW_No_8RhMR1EHG_9vBxksWIenLtS8bh?usp=sharing">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" class="center" alt="Open In Colab"/>
 </a>
+
+### Clone the repo and run Jupyter notebook on the system
+
+#### Pre-requisite software Installation
+
+- [Jupyter](https://jupyter.org/install)
+- [Python](https://www.python.org/downloads/release/python-380/)
+- [pip](https://packaging.python.org/en/latest/tutorials/installing-packages/)
+
+The tensorflow version I use only makes use of CPU so the following two software installations
+arent mandatory. You may get a warning if you dont have a NVIDIA GPU while running the code 
+but it doesnt impact the models that are built.
+
+- [Cuda toolkit](https://developer.nvidia.com/cuda-toolkit-archive)
+- [cuDNN](https://developer.nvidia.com/cudnn)
+
+#### Running the Jupyter notebook on your system
+
+1. Clone the repo onto your system
+```bash
+git clone https://github.com/ACM40960/project-21200461.git
+```
+
+2. The repo you download should have this file structure on your system
+
+```
+.
+├── images
+├── src
+│   └── adversarial_attack.ipynb
+├── LICENSE.md
+├── README.md
+└── requirements.txt
+```
+3. Launch command prompt from the directory where the repo is installed and run the following command to install all the required libraries
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Launch the **adversarial_attack.ipynb in the src folder** either by double clicking on it(if Jupyter is the default software for opening ipynb on your system) or run the following command from the **src folder** to launch jupyter.
+
+``` bash
+jupyter notebook
+```
 
 <!-- USAGE -->
 ## Usage
