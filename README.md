@@ -17,7 +17,7 @@ Adversarial Attack is the methodology used to trick deep neural networks to misc
 
 <img src="https://github.com/ACM40960/project-21200461/blob/main/images/adv_example.png">
 
-In this project I implement three types of attacks which are implemented based on the following papers:
+In this project I implement three types of attacks on MNIST dataset which are implemented based on the following papers:
 
 1. FGSM - [Link to paper](https://arxiv.org/abs/1412.6572)
 2. Deepfool Attack - [Link to paper](https://arxiv.org/abs/1511.04599)
@@ -48,21 +48,24 @@ I have also built two simple defence techniques against these attacks:
 
 Since I have used only a notebook format to implement the project there are two ways you can run this project:
 
-### Use the hassle free Google Collab notebook
+### Google Collab notebook
+
+The Hassle free approach
 
 All the necessary libraries are downloaded as part of the notebook and uses its own compute power to run the project.
+There is also a link to launch the colab notebook in the adversarial_attack.ipynb file.
 <br><br>
 <a href="https://colab.research.google.com/drive/1LW_No_8RhMR1EHG_9vBxksWIenLtS8bh?usp=sharing">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" class="center" alt="Open In Colab"/>
 </a>
 
-### Clone the repo and run Jupyter notebook on the system
+### Clone the repo and run Jupyter notebook on your system
 
 #### Pre-requisite software Installation
 
 - [Jupyter](https://jupyter.org/install)
 - [Python](https://www.python.org/downloads/release/python-380/)
-- [pip](https://packaging.python.org/en/latest/tutorials/installing-packages/)
+- [pip](https://pip.pypa.io/en/stable/installation/)
 
 The tensorflow version I use only makes use of CPU so the following two software installations
 arent mandatory. You may get a warning if you dont have a NVIDIA GPU while running the code 
@@ -104,6 +107,37 @@ jupyter notebook
 <!-- USAGE -->
 ## Usage
 
+1. Ways to run the project on Colab/ Jupyter is illustrated below. Please note using Run All will take awhile for the entire notebook to finish running.
+(Code section to build CNN ~ 10-15 minutes(depends on system), adversarial training on 5000 images ~ 10-15 minutes)
+<p float="left" >
+<img src="https://github.com/ACM40960/project-21200461/blob/main/images/run.jpg"  width="100"  title="Juyter- Run options"/>
+<img src="https://github.com/ACM40960/project-21200461/blob/main/images/colab_run.jpg"  width="100"  title="Colab-Run options"/>
+</p>
+
+2. Sections of code that fits the images for predictions:
+
+```python
+cnn_model_fit = cnn_model.fit(x_train, 
+                        y_train,
+                        validation_data = (x_val, y_val),
+                        batch_size=128,
+                        epochs=10)
+```
+3. Various attacks and an example of results:
+```python
+perturbed_image = FGSM(cnn_model, image, label, eps=0.1)
+```
+<img src="https://github.com/ACM40960/project-21200461/blob/main/images/fgsm_example.png" title="FGSM">
+
+```python
+label_pert, pert_image = DeepFool(image, cnn_model)
+```
+<img src="https://github.com/ACM40960/project-21200461/blob/main/images/deepfool_example.png" title="DeepFool">
+
+```python
+ perturbed_image = lbfgs(cnn_model,image,actual_label)
+```
+<img src="https://github.com/ACM40960/project-21200461/blob/main/images/lbfgs_example.png" title="LBFGS">
 
 <!-- LICENSE -->
 ## License
