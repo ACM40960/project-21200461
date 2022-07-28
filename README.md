@@ -110,6 +110,8 @@ jupyter notebook
 ```
 
 </p>
+</details>
+
 <!-- USAGE -->
 ## Usage
 
