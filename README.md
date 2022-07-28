@@ -48,8 +48,9 @@ I have also built two simple defence techniques against these attacks:
 
 Since I have used only a notebook format to implement the project there are two ways you can run this project:
 
-### Google Collab notebook
-
+<details>
+<summary> Google Collab notebook </summary>
+<p>
 The Hassle free approach
 
 All the necessary libraries are downloaded as part of the notebook and uses its own compute power to run the project.
@@ -58,8 +59,12 @@ There is also a link to launch the colab notebook in the adversarial_attack.ipyn
 <a href="https://colab.research.google.com/drive/1LW_No_8RhMR1EHG_9vBxksWIenLtS8bh?usp=sharing">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" class="center" alt="Open In Colab"/>
 </a>
+</p>
+</details>
 
-### Clone the repo and run Jupyter notebook on your system
+<details>
+<summary> Clone the repo and run Jupyter notebook on your system </summary>
+<p>
 
 #### Pre-requisite software Installation
 
@@ -104,6 +109,7 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
+</p>
 <!-- USAGE -->
 ## Usage
 
