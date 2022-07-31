@@ -55,7 +55,7 @@ The Hassle free approach
 
 All the necessary libraries are downloaded as part of the notebook and uses its own compute power to run the project.
 <br><br>
-<a href="https://colab.research.google.com/drive/1LW_No_8RhMR1EHG_9vBxksWIenLtS8bh?usp=sharing">
+<a href="https://colab.research.google.com/drive/1PQHojePoskwSC3xi3BxVBrAjnngjWR6J?usp=sharing">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" class="center" alt="Open In Colab"/>
 </a>
 </p>
