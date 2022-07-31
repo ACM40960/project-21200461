@@ -1,12 +1,12 @@
 # Adversarial Attack on Image Data
-> Create different type of adversarial examples to fool deep neural networks into misclassifying data.
+> Create different types of adversarial examples to fool deep neural networks into misclassifying data.
 <p align='center'>
 <!-- PROJECT SHIELDS -->
 <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue">
 <img src="https://img.shields.io/badge/Jupyter-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white">
+<img src="https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252">
 <img src="https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white">
 <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=TensorFlow&logoColor=white">
-<img src="https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252">
 <img src="https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=Keras&logoColor=white">
 </p>
 
@@ -23,7 +23,7 @@ In this project I implement three types of attacks on MNIST dataset which are im
 2. Deepfool Attack - [Link to paper](https://arxiv.org/abs/1511.04599)
 3. L-BFGS Attack - [Link to paper](https://arxiv.org/abs/1312.6199)
 
-I have also built two simple defence techniques against these attacks:
+I have also built two simple defence techniques against a particular type of adversarial attack:
 
 1. Adversarial training
 2. APE-GAN - [Link to paper](https://arxiv.org/abs/1707.05474)
@@ -54,7 +54,6 @@ Since I have used only a notebook format to implement the project there are two 
 The Hassle free approach
 
 All the necessary libraries are downloaded as part of the notebook and uses its own compute power to run the project.
-There is also a link to launch the colab notebook in the adversarial_attack.ipynb file.
 <br><br>
 <a href="https://colab.research.google.com/drive/1LW_No_8RhMR1EHG_9vBxksWIenLtS8bh?usp=sharing">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" class="center" alt="Open In Colab"/>
@@ -73,7 +72,7 @@ There is also a link to launch the colab notebook in the adversarial_attack.ipyn
 - [pip](https://pip.pypa.io/en/stable/installation/)
 
 The tensorflow version I use only makes use of CPU so the following two software installations
-arent mandatory. You may get a warning if you dont have a NVIDIA GPU while running the code 
+arent mandatory. You may get a warning if your system does not have a NVIDIA GPU, while running the code 
 but it doesnt impact the models that are built.
 
 - [Cuda toolkit](https://developer.nvidia.com/cuda-toolkit-archive)
@@ -116,7 +115,7 @@ jupyter notebook
 ## Usage
 
 1. Ways to run the project on Colab/ Jupyter is illustrated below. Please note using Run All will take awhile for the entire notebook to finish running.
-(Code section to build CNN ~ 10-15 minutes(depends on system), adversarial training on 5000 images ~ 10-15 minutes)
+(Code section to build CNN ~ 10-15 minutes(depends on system), adversarial training on 5000 images ~ 10-15 minutes, APE-GAN training > 20 minutes for 10 epochs)
 <p float="left" >
 <img src="https://github.com/ACM40960/project-21200461/blob/main/images/run.jpg"  width=300  title="Jupyter- Run options"/>
 <img src="https://github.com/ACM40960/project-21200461/blob/main/images/colab_run.jpg"  width=300 title="Colab-Run options"/>
@@ -143,7 +142,7 @@ label_pert, pert_image = DeepFool(image, cnn_model)
 <img src="https://github.com/ACM40960/project-21200461/blob/main/images/deepfool_example.png" title="DeepFool">
 
 ```python
- perturbed_image = lbfgs(cnn_model,image,actual_label)
+ perturbed_image = LBFGS(cnn_model,image,actual_label)
 ```
 <img src="https://github.com/ACM40960/project-21200461/blob/main/images/lbfgs_example.png" title="LBFGS">
 
